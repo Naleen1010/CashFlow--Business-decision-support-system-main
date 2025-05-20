@@ -1,0 +1,41 @@
+# Ignore node modules and build artifacts
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.cache/
+frontend/coverage/
+
+# Ignore Python artifacts
+backend/**/__pycache__/
+backend/**/*.py[cod]
+backend/**/*$py.class
+backend/**/*.so
+backend/.env
+backend/.env.local
+backend/.venv
+backend/env/
+backend/venv/
+backend/ENV/
+
+# Git files
+.git/
+.github/
+.gitignore
+
+# Editor directories
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Misc
+README.md
+LICENSE

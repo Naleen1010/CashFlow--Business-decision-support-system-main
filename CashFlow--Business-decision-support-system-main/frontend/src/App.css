@@ -1,0 +1,72 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Simple display size classes - these apply a transform to the document body */
+/* These classes are added by the ThemeContext when display size changes */
+body.display-size-90 {
+  transform: scale(0.9);
+  transform-origin: top left;
+}
+
+body.display-size-80 {
+  transform: scale(0.8);
+  transform-origin: top left;
+}
+
+/* Add some compensation for the body transform */
+body.display-size-90,
+body.display-size-80 {
+  width: calc(100vw / var(--scale-factor, 1));
+  min-height: calc(100vh / var(--scale-factor, 1));
+  overflow-x: hidden;
+}
+
+body.display-size-90 {
+  --scale-factor: 0.9;
+}
+
+body.display-size-80 {
+  --scale-factor: 0.8;
+}
+
+/* Don't override specific MUI components - just let the body transform handle scaling */

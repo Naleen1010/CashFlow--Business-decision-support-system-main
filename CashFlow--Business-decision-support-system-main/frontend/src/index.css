@@ -1,0 +1,60 @@
+/* Add this to your main CSS file */
+
+:root {
+  --app-scale: 100%;
+  --scale-factor: calc(var(--app-scale, 100%) / 100);
+}
+
+/* Apply scaling to specific components rather than entire document */
+.scale-with-settings {
+  transform: scale(var(--scale-factor));
+  transform-origin: top left;
+}
+
+/* Alternative approach using font-size */
+.scale-text-only {
+  font-size: calc(1rem * var(--scale-factor));
+}
+
+/* Specific adjustments for POS view */
+.pos-product-grid {
+  gap: calc(8px * var(--scale-factor));
+}
+
+.product-card {
+  padding: calc(12px * var(--scale-factor));
+}
+
+/* For smaller displays, increase density */
+@media (max-width: 1280px) {
+  .condensed-mode .product-card {
+    padding: calc(8px * var(--scale-factor));
+  }
+  
+  .condensed-mode .pos-product-grid {
+    gap: calc(4px * var(--scale-factor));
+  }
+}
+
+/* Adjust specific components that might look bad when scaled */
+.display-size-80 .header-icon {
+  /* Counter-scale important UI elements to keep them usable */
+  transform: scale(1.25);
+}
+
+.display-size-90 .header-icon {
+  transform: scale(1.11);
+}
+
+/* Add these classes to your body based on current display size */
+body.display-size-80 {
+  --app-scale: 80%;
+}
+
+body.display-size-90 {
+  --app-scale: 90%;
+}
+
+body.display-size-100 {
+  --app-scale: 100%;
+}
